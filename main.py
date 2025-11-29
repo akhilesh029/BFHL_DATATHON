@@ -238,3 +238,16 @@ def extract_bill(req: ExtractRequest):
             total_item_count=total_count
         )
     )
+
+
+# ==============================================================
+#           REQUIRED WEBHOOK FOR HACKRX SUBMISSION
+# ==============================================================
+
+@app.post("/api/v1/hackrx/run", response_model=ExtractResponse)
+def hackrx_webhook(req: ExtractRequest):
+    """
+    HackRx portal calls THIS endpoint.
+    It must behave exactly like /extract-bill-data.
+    """
+    return extract_bill(req)
