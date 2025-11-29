@@ -125,7 +125,7 @@ Install dependencies:
 pip install -r requirements.txt
 
 Add environment variables in .env:
-GENAI_API_KEY=AIzaSyA5nyRyQhrOQpubXCq0zIGi_1KWVyzMHm8
+GENAI_API_KEY=xyz..
 GENAI_MODEL=gemini-2.5-flash
 
 Run FastAPI server:
